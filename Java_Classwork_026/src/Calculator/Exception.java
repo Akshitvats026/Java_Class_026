@@ -2,18 +2,20 @@ package Calculator;
 
 import java.util.Scanner;
 
-public class Exception {
+public class ExceptionError {
     public static void main(String[] args) {
-        int a, b, z = 0;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Two Integer: ");
-        a = sc.nextInt();
-        b = sc.nextInt();
+    int z =0;
+
         try {
+            int a, b;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter Two Integer: ");
+            a = sc.nextInt();
+            b = sc.nextInt();
             z = a / b;
         }
-//        the thing too learn in exception is that catch cant  be above the try
-        catch (ArithmeticException e) {
+
+        catch (Exception e) {
             System.out.println(e.getMessage());
         }
         finally {
